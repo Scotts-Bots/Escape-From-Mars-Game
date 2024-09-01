@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>ESCAPE MARS</title>
+	<style>
+		body {
+			margin: 0;
+		}
+
+		#overlay {
+			position: absolute;
+			margin-left: 43vw;
+			margin-top: 48vh;
+		}
+
+		#board {
+			position: absolute;
+			margin-left: 5vw;
+			margin-top: 10vh;
+			background-color: #ff2600;
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid black;
+		}
+
+		th,
+		td {
+			padding: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <h1>MARS GAME LEVELS</h1> -->
+	<!-- <a href="level2.html"><button>Level 2</button></a>
+		<a href="test.html"><button>Test Area</button></a>
+		<a href="level1.html"><button>level 1</button></a>
+		<a href="level3.html"><button>level 3</button></a> -->
+
+	<div id="overlay">
+		<input id="nameInput" placeholder="Enter name">
+		<button type="button" onclick="getInputValue();">Set Name</button>
+	</div>
+
+	<table id="board">
+		<tr>
+			<th>Player</th>
+			<th>Date</th>
+			<th>Time (s)</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<script>
+		var array = [["A1","B1","C1"],
+					["A2","B2","C2"],
+					["A3","B3","C3"],
+					["A4","B4","C4"],
+					["A5","B5","C5"],
+					["A1","B1","C1"],
+					["A2","B2","C2"],
+					["A3","B3","C3"],
+					["A3","B3","C3"],
+					["A4","B4","C4"],
+					["A5","B5","C5"],
+					["A1","B1","C1"],
+					["A2","B2","C2"],
+					["A3","B3","C3"],
+					["A4","B4","C4"],
+					["A5","B5","C5"]],
+		table = document.getElementById("board");
+
+		var results = localStorage["scores"].split(",");
+		console.log("scores" + localStorage["scores"]);
+
+		for (let k=0; k < 30; k += 3) {
+			if (k<results.length-3) {
+				array[Math.floor(k/3)][0] = results[k];
+				array[Math.floor(k/3)][1] = results[k+1];
+				array[Math.floor(k/3)][2] = results[k+2];
+			} else {
+				array[Math.floor(k/3)][0] = "";
+				array[Math.floor(k/3)][1] = "";
+				array[Math.floor(k/3)][2] = "";
+			}
+		}
+
+		// rows
+		for(let i = 1; i < table.rows.length; i++) {
+			// cells
+			for(let j = 0; j < table.rows[i].cells.length; j++)
+			{
+				table.rows[i].cells[j].innerHTML = array[i - 1][j];
+			}
+		}
+
+	</script>
+
+	<script src="Libraries/three.js"></script>
+	<script src="Libraries/threex.domevents.js"></script>
+	<script src="js/MainMenu.js"></script>
+</body>
+
+</html>

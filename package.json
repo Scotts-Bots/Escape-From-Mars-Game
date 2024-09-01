@@ -1,0 +1,16 @@
+{
+  "name": "escape-from-mars-game",
+  "version": "1.0.0",
+  "description": "three js web game for practice",
+  "main": "index.js",
+  "dependencies": {
+    "ammo.js-main": "^0.0.2",
+    "three": "^0.128.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nico Govindsamy",
+  "license": "ISC"
+}
