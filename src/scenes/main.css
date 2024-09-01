@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+
+#overlay {
+    position: absolute;
+    margin-left: 43vw;
+    margin-top: 48vh;
+}
+
+#board {
+    position: absolute;
+    margin-left: 5vw;
+    margin-top: 10vh;
+    background-color: #ff2600;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 10px;
+}

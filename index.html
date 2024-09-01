@@ -1,57 +1,10 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<title>ESCAPE MARS</title>
-	<style>
-		body {
-			margin: 0;
-		}
-
-		#overlay {
-			position: absolute;
-			margin-left: 43vw;
-			margin-top: 48vh;
-		}
-
-		#board {
-			position: absolute;
-			margin-left: 5vw;
-			margin-top: 10vh;
-			background-color: #ff2600;
-		}
-
-		table,
-		th,
-		td {
-			border: 1px solid black;
-		}
-
-		th,
-		td {
-			padding: 10px;
-		}
-	</style>
-</head>
-
-<body>
-	<!-- <h1>MARS GAME LEVELS</h1> -->
-	<!-- <a href="level2.html"><button>Level 2</button></a>
-		<a href="test.html"><button>Test Area</button></a>
-		<a href="level1.html"><button>level 1</button></a>
-		<a href="level3.html"><button>level 3</button></a> -->
-
-	<div id="overlay">
-		<input id="nameInput" placeholder="Enter name">
-		<button type="button" onclick="getInputValue();">Set Name</button>
-	</div>
-	
-	<script>localStorage["scores"] = "";</script>
-
-	<script src="Libraries/three.js"></script>
-	<script src="Libraries/threex.domevents.js"></script>
-	<script src="js/MainMenu.js"></script>
-</body>
-
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>ESCAPE FROM MARS</title>
+	</head>
+	<body>
+		<canvas id="scene"></canvas>
+	</body>
 </html>

@@ -4,12 +4,35 @@
   "description": "three js web game for practice",
   "main": "index.js",
   "dependencies": {
-    "ammo.js-main": "^0.0.2",
-    "three": "^0.128.0"
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@tweenjs/tween.js": "^18.6.4",
+    "babel-loader": "^8.2.2",
+    "black-engine": "^0.5.15",
+    "cannon-es": "^0.18.0",
+    "cannon-es-debugger": "^1.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^5.2.6",
+    "file-loader": "^6.2.0",
+    "glslify-loader": "^2.0.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.1.0",
+    "portfinder-sync": "0.0.2",
+    "raw-loader": "^4.0.2",
+    "stats.js": "^0.17.0",
+    "style-loader": "^3.0.0",
+    "three": "^0.135.0",
+    "webpack": "^5.42.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config ./bundler/webpack.dev.js"
   },
   "author": "Nico Govindsamy",
   "license": "ISC"
