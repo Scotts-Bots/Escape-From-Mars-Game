@@ -1,4 +1,12 @@
-import { SCENES, sceneManager } from './core/scene_manager'
+import { sceneManager } from './core/scene_manager'
+
+const SCENES = {
+    MAIN_MENU: "./scenes/mainIndex.html",
+    LEVEL_1: 1,
+    LEVEL_2: 2,
+    LEVEL_3: 3,
+    END_SCREEN: 4
+}
 
 const globalState = {
     playerName: null,
