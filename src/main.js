@@ -1,12 +1,5 @@
-import { sceneManager } from './core/scene_manager'
-
-const SCENES = {
-    MAIN_MENU: "./scenes/mainIndex.html",
-    LEVEL_1: 1,
-    LEVEL_2: 2,
-    LEVEL_3: 3,
-    END_SCREEN: 4
-}
+import '../style.css';
+import BaseScene from './core/baseScene';
 
 const globalState = {
     playerName: null,
@@ -16,9 +9,5 @@ const globalState = {
 
 localStorage["scores"] = "";
 
-const runGame = () => {
-    sceneManager.loadScene(SCENES.LEVEL_1)
-}
-
-//MAIN
-sceneManager.loadScene(SCENES.MAIN_MENU)
+const baseScene = new BaseScene();
+baseScene.loadMainMenuScene();
